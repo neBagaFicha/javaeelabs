@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="thirdTaskPane" onKeyPressed="#onKeyPressed" onMouseClicked="#onThirdTaskPaneClick" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="labs.javaeelabs.thirdTask.thirdTaskController">
+   <children>
+      <Button fx:id="backButton" layoutX="45.0" layoutY="41.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
+      <AnchorPane fx:id="toolsPane" layoutX="448.0" prefHeight="500.0" prefWidth="252.0" style="-fx-background-color: lightgray;">
+         <children>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="332.0" prefWidth="87.0" style="-fx-background-color: lightgray; -fx-border-color: gray;">
+               <children>
+                  <ToggleButton fx:id="lineToggleButton" layoutX="11.0" layoutY="14.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="70.0" style="-fx-border-color: black;">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="choosePrimitiveToggleButtonGroup" />
+                     </toggleGroup>
+                     <graphic>
+                        <Line endX="-128.0" endY="36.0" startX="-100.0" />
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="rectangleToggleButton" layoutX="11.0" layoutY="253.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="70.0" style="-fx-border-color: black;" toggleGroup="$choosePrimitiveToggleButtonGroup">
+                     <graphic>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#979797" height="37.0" stroke="BLACK" strokeType="INSIDE" width="48.0" />
+                     </graphic></ToggleButton>
+                  <ToggleButton fx:id="circleToggleButton" layoutX="11.0" layoutY="93.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="39.0" style="-fx-border-color: black;" toggleGroup="$choosePrimitiveToggleButtonGroup">
+                     <graphic>
+                        <Circle fill="#979797" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+                     </graphic></ToggleButton>
+                  <ToggleButton fx:id="ellipseToggleButton" layoutX="11.0" layoutY="173.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="68.0" style="-fx-border-color: black;" toggleGroup="$choosePrimitiveToggleButtonGroup">
+                     <graphic>
+                        <Ellipse fill="#979797" radiusX="23.0" radiusY="19.0" stroke="BLACK" strokeType="INSIDE" />
+                     </graphic></ToggleButton>
+               </children>
+            </Pane>
+            <Pane layoutX="108.0" layoutY="14.0" prefHeight="190.0" prefWidth="138.0" style="-fx-background-color: lightgray; -fx-border-color: gray;">
+               <children>
+                  <ColorPicker fx:id="colorPickerForContour" layoutX="9.0" layoutY="35.0" prefHeight="25.0" prefWidth="120.0" />
+                  <Text layoutX="9.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цвет контура" />
+                  <ColorPicker fx:id="colorPickerForFill" layoutX="9.0" layoutY="121.0" prefHeight="25.0" prefWidth="120.0" />
+                  <Text layoutX="9.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цвет заливки" />
+               </children>
+            </Pane>
+            <Pane layoutX="108.0" layoutY="212.0" prefHeight="134.0" prefWidth="138.0" style="-fx-background-color: lightgray; -fx-border-color: gray;">
+               <children>
+                  <TextField fx:id="textFieldForWidthOfContour" layoutX="58.0" layoutY="32.0" prefWidth="65.0" />
+                  <Text layoutX="8.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Контур" />
+                  <Text layoutX="8.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Толщина" />
+                  <ComboBox fx:id="comboBoxForTypeOfContour" layoutX="58.0" layoutY="86.0" prefWidth="65.0" />
+                  <Text layoutX="8.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Тип" />
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="359.0" prefHeight="116.0" prefWidth="232.0" style="-fx-background-color: lightgray; -fx-border-color: gray;">
+               <children>
+                  <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Размер изображения pxl" />
+                  <TextField fx:id="widthForImageToSave" layoutX="90.0" layoutY="52.0" prefWidth="70.0" />
+                  <TextField fx:id="heightForImageToSave" layoutX="90.0" layoutY="83.0" prefWidth="70.0" />
+                  <Text layoutX="27.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ширина" />
+                  <Text layoutX="27.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Высота" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Button fx:id="saveButton" layoutX="78.0" layoutY="2.0" mnemonicParsing="false" onAction="#onSaveButtonClick" text="Save" />
+   </children>
+</AnchorPane>

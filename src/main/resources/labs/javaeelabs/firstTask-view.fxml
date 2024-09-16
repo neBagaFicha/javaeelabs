@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="firstTaskPane" onMouseClicked="#firstTaskPaneClick" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="labs.javaeelabs.firstTask.FirstTaskController">
+   <children>
+      <Button fx:id="backButton" layoutX="25.0" layoutY="21.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
+      <AnchorPane layoutX="500.0" prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: gray;">
+         <children>
+            <ToggleButton layoutX="50.0" layoutY="64.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+               <toggleGroup>
+                  <ToggleGroup fx:id="firstTaskToggleButtonGroup" />
+               </toggleGroup>
+               <graphic>
+                  <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../../../../build/resources/main/labs/javaeelabs/photo_2024-08-26_23-19-43.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton layoutX="50.0" layoutY="200.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" toggleGroup="$firstTaskToggleButtonGroup">
+               <graphic>
+                  <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../../../../build/resources/main/labs/javaeelabs/photo_2024-08-26_23-19-44.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <Button fx:id="saveButton" layoutX="53.0" layoutY="412.0" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="50.0" prefWidth="100.0" text="Save" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

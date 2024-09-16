@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="labs.javaeelabs.MainController">
+   <children>
+      <Button fx:id="firstTaskButton" layoutX="55.0" layoutY="72.0" mnemonicParsing="false" onAction="#onFirstTaskButtonClick" prefHeight="100.0" prefWidth="100.0" text="1" />
+      <Button fx:id="secondTaskButton" layoutX="219.0" layoutY="72.0" mnemonicParsing="false" onAction="#onSecondTaskButtonClick" prefHeight="100.0" prefWidth="100.0" text="2" />
+      <Button fx:id="thirdTaskButton" layoutX="379.0" layoutY="72.0" mnemonicParsing="false" onAction="#onThirdTaskButtonClick" prefHeight="100.0" prefWidth="100.0" text="3" />
+      <Button fx:id="fourthTaskButton" layoutX="546.0" layoutY="72.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="4" />
+      <Button layoutX="55.0" layoutY="250.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Button" />
+      <Button layoutX="219.0" layoutY="250.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Button" />
+      <Button layoutX="379.0" layoutY="250.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Button" />
+      <Button layoutX="546.0" layoutY="250.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Button" />
+   </children>
+</AnchorPane>
