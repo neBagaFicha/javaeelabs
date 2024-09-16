@@ -67,10 +67,11 @@
                   <TextField fx:id="heightForImageToSave" layoutX="90.0" layoutY="83.0" prefWidth="70.0" />
                   <Text layoutX="27.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ширина" />
                   <Text layoutX="27.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Высота" />
+                  <Button fx:id="saveButton" layoutX="181.0" layoutY="54.0" mnemonicParsing="false" onAction="#onSaveButtonClick" text="Save" />
+                  <Button fx:id="helpButton" layoutX="181.0" layoutY="83.0" mnemonicParsing="false" onAction="#onHelpButtonReleased" onMousePressed="#onHelpButtonPressed" text="Help" />
                </children>
             </Pane>
          </children>
       </AnchorPane>
-      <Button fx:id="saveButton" layoutX="78.0" layoutY="2.0" mnemonicParsing="false" onAction="#onSaveButtonClick" text="Save" />
    </children>
 </AnchorPane>

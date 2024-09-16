@@ -50,10 +50,19 @@ public class thirdTaskController implements Initializable {
     TextField widthForImageToSave;
     @FXML
     TextField heightForImageToSave;
-   @FXML
-   Button saveButton;
+    @FXML
+    Button saveButton;
+    @FXML
+    Button helpButton;
 
-
+    Tooltip tooltipForHelp = new Tooltip("""
+            Это приложение выполняет функцию графического редактора,
+             \
+            настройте изображение \
+            в правой панели и щелкните лкм по левой панели,
+             после добавления на панель фигуры, вы можете изменять \
+            ее размеры\s
+            (клавиши "<" ">" "+" "-" и менять ее расположение на клавиши стрелок\s""");
 
 
     @FXML
@@ -134,5 +143,19 @@ public class thirdTaskController implements Initializable {
         }
     }
 
+    @FXML
+    private void onHelpButtonPressed(MouseEvent event) {
+        tooltipForHelp.show(helpButton, event.getScreenX(), event.getScreenY());
+    }
+
+    @FXML
+    private void onHelpButtonReleased(){
+        tooltipForHelp.hide();
+    }
+
+    @FXML
+    private void onSaveButtonClick(){
+        FileSaver.saveFile(thirdTaskPane.snapshot(null, null), "png", Integer.parseInt(widthForImageToSave.getText()), Integer.parseInt(heightForImageToSave.getText()), (Stage) backButton.getScene().getWindow());
+    }
 
 }
