@@ -4,6 +4,7 @@ module labs.javaeelabs {
     requires java.desktop;
     requires javafx.swing;
     requires static lombok;
+    requires javafx.media;
 
 
     opens labs.javaeelabs to javafx.fxml;
