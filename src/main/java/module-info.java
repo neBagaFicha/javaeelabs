@@ -17,4 +17,7 @@ module labs.javaeelabs {
 
     opens labs.javaeelabs.thirdTask to javafx.fxml;
     exports labs.javaeelabs.thirdTask;
+
+    opens labs.javaeelabs.fifthTask to javafx.fxml;
+    exports labs.javaeelabs.fifthTask;
 }
