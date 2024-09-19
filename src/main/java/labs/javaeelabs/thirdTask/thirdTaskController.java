@@ -6,9 +6,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -54,6 +56,8 @@ public class thirdTaskController implements Initializable {
     Button saveButton;
     @FXML
     Button helpButton;
+    @FXML
+    Button fileButton;
 
     Tooltip tooltipForHelp = new Tooltip("""
             Это приложение выполняет функцию графического редактора,
@@ -155,7 +159,35 @@ public class thirdTaskController implements Initializable {
 
     @FXML
     private void onSaveButtonClick(){
-        FileSaver.saveFile(thirdTaskPane.snapshot(null, null), "png", Integer.parseInt(widthForImageToSave.getText()), Integer.parseInt(heightForImageToSave.getText()), (Stage) backButton.getScene().getWindow());
+        SnapshotParameters snapshotParameters = new SnapshotParameters();
+        snapshotParameters.setViewport(new Rectangle2D(0,0,700-252,500));
+        FileSaver.saveFile(thirdTaskPane.snapshot(snapshotParameters, null), "png", Integer.parseInt(widthForImageToSave.getText()), Integer.parseInt(heightForImageToSave.getText()), (Stage) backButton.getScene().getWindow());
+    }
+
+    @FXML
+    private void onFileButtonClick(){
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Выберите изображение");
+        // Установите фильтры для выбора только изображений
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Изображения (*.png, *.jpg, *.gif)", "*.png", "*.jpg", "*.gif");
+        fileChooser.getExtensionFilters().add(extFilter);
+
+        // Откройте диалог выбора файла
+        File file = fileChooser.showOpenDialog((Stage) backButton.getScene().getWindow());
+        if (file != null) {
+            // Загрузите изображение
+            try {
+                BufferedImage bufferedImage = ImageIO.read(file);
+                WritableImage writableImage = SwingFXUtils.toFXImage(bufferedImage, null);
+                // Здесь вы можете добавить код для отображения изображения в вашем приложении
+                // Например, добавьте его на панель или в ImageView
+                ImageView imageView = new ImageView(writableImage);
+
+                thirdTaskPane.getChildren().add(imageView);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }

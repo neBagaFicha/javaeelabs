@@ -22,6 +22,8 @@ public class MainController {
     @FXML
     Button seventhTaskButton;
     @FXML
+    Button sixthTaskButton;
+    @FXML
     protected void onFirstTaskButtonClick() throws IOException {
         Scene firstTaskScene = new Scene(new FXMLLoader(Main.class.getResource("firstTask-view.fxml")).load());
         ((Stage) firstTaskButton.getScene().getWindow()).setScene(firstTaskScene);
@@ -50,5 +52,17 @@ public class MainController {
     protected void onSeventhTaskButtonClick() throws IOException {
         Scene seventhTaskScene = new Scene(new FXMLLoader(Main.class.getResource("seventhTask-view.fxml")).load());
         ((Stage) seventhTaskButton.getScene().getWindow()).setScene(seventhTaskScene);
+    }
+
+    @FXML
+    protected void onFourthTaskButtonClick() throws IOException {
+        Scene fourthTaskScene = new Scene(new FXMLLoader(Main.class.getResource("fourthTask-view.fxml")).load());
+        ((Stage) seventhTaskButton.getScene().getWindow()).setScene(fourthTaskScene);
+    }
+
+    @FXML
+    protected void onSixthTaskButtonClick() throws IOException {
+        Scene sixthTaskScene = new Scene(new FXMLLoader(Main.class.getResource("sixthTask-view.fxml")).load());
+        ((Stage) seventhTaskButton.getScene().getWindow()).setScene(sixthTaskScene);
     }
 }

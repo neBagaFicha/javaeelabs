@@ -1,0 +1,12 @@
+{
+  "scenes": {
+    "main-view": "resources/labs/javaeelabs/main-view.fxml",
+    "firstTask-view": "resources/labs/javaeelabs/firstTask-view.fxml",
+    "secondTask-view": "resources/labs/javaeelabs/secondTask-view.fxml",
+    "thirdTask-view": "resources/labs/javaeelabs/thirdTask-view.fxml",
+    "fourthTask-view": "resources/labs/javaeelabs/fourthTask-view.fxml",
+    "fourthTaskWindow": "resources/labs/javaeelabs/fifthTask-view.fxml",
+    "fifthTaskWindow": "resources/labs/javaeelabs/sixthTask-view.fxml",
+    "sixthTaskWindow": "resources/labs/javaeelabs/seventhTask-view.fxml"
+  }
+}

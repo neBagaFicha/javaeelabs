@@ -69,6 +69,7 @@
                   <Text layoutX="27.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Высота" />
                   <Button fx:id="saveButton" layoutX="181.0" layoutY="54.0" mnemonicParsing="false" onAction="#onSaveButtonClick" text="Save" />
                   <Button fx:id="helpButton" layoutX="181.0" layoutY="83.0" mnemonicParsing="false" onAction="#onHelpButtonReleased" onMousePressed="#onHelpButtonPressed" text="Help" />
+                  <Button fx:id="fileButton" layoutX="184.0" layoutY="19.0" mnemonicParsing="false" onAction="#onFileButtonClick" text="File" />
                </children>
             </Pane>
          </children>

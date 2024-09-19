@@ -1,10 +1,10 @@
 module labs.javaeelabs {
     requires javafx.controls;
     requires javafx.fxml;
-    requires java.desktop;
     requires javafx.swing;
     requires static lombok;
     requires javafx.media;
+    requires com.fasterxml.jackson.databind;
 
 
     opens labs.javaeelabs to javafx.fxml;
@@ -24,4 +24,10 @@ module labs.javaeelabs {
 
     opens labs.javaeelabs.seventhTask to javafx.fxml;
     exports labs.javaeelabs.seventhTask;
+
+    opens labs.javaeelabs.fourthTask to javafx.fxml;
+    exports labs.javaeelabs.fourthTask;
+
+    opens labs.javaeelabs.sixthTask to javafx.fxml;
+    exports labs.javaeelabs.sixthTask;
 }
